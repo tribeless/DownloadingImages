@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    //class extending AsyncTask to run on a background thread
+    // extending AsyncTask to run on a background thread
 
        public static class ImageDownloader extends AsyncTask<String, Void, Bitmap>{
 
