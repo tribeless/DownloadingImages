@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       
+
         myImage = findViewById(R.id.imageView);
 
 
@@ -74,8 +74,9 @@ public class MainActivity extends AppCompatActivity {
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.connect();
 
-                //downloading the image directly and then converting it into a bitmap
+                //downloading the image directly
                 InputStream inputStream = urlConnection.getInputStream();
+                // converting the image into a bitmap
                 return BitmapFactory.decodeStream(inputStream);
             }
 
