@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
            protected Bitmap doInBackground(String...urls){
 
-            URL url = null;
+            URL url ;
             try {
                 url = new URL(urls[0]);
 
