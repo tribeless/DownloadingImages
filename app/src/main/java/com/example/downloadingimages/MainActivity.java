@@ -28,7 +28,7 @@ import java.util.concurrent.ExecutionException;
 ***/
 public class MainActivity extends AppCompatActivity {
 
-    Button clickedButton;
+
     ImageView myImage;
 
     //function to download image
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        clickedButton = findViewById(R.id.button);
+       
         myImage = findViewById(R.id.imageView);
 
 
