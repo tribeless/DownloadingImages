@@ -7,13 +7,12 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.concurrent.ExecutionException;
+
 
 
 
@@ -30,16 +29,20 @@ public class MainActivity extends AppCompatActivity {
 
 
     ImageView myImage;
+    EditText editText;
 
     //function to download image
     public void downloadImage(View view) {
 
-
+                //https://food.jumia.co.ke/blog/wp-content/uploads/2016/06/lake-naivasha-kenya-660x400.jpg
         //object creation for class ImageDownloader
        ImageDownloader imageDownloader = new ImageDownloader();
+       String userURL = editText.getText().toString();
+
        Bitmap picture;
         try {
-            picture = imageDownloader.execute("https://d3hne3c382ip58.cloudfront.net/files/uploads/bookmundi/resized/cmsfeatured/places-to-travel-in-2018-1522385995-390X219.jpg").get();
+            //getting image URL from the user
+            picture = imageDownloader.execute(userURL).get();
             myImage.setImageBitmap(picture);
         } catch (Exception e) {
             e.printStackTrace();
@@ -54,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         myImage = findViewById(R.id.imageView);
+        editText = findViewById(R.id.editText);
+
 
 
     }

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Downloading Images</string>
     <string name="btn_1">DOWNLOAD</string>
+    <string name="hint_wrd">Enter an image url to download</string>
 </resources>
